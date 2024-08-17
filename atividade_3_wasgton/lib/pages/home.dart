@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';// home
 import 'detalhes_destino_madri.dart'; // Importando a página de detalhes
+import 'lugares_populares_page.dart'; // Importando a página de lugares populares
 
 class HomePage extends StatelessWidget {
   @override
@@ -93,11 +94,11 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-                    onPressed: () {
-                      // Ação para o botão "Ver tudo"
-                    },
-                    child: Text('Ver tudo'),
-                  ),
+  onPressed: () {
+    Navigator.pushNamed(context, '/lugaresPopulares');
+  },
+  child: Text('Ver tudo'),
+),
                 ],
               ),
               SizedBox(height: 16),
