@@ -57,7 +57,12 @@ flutter:
   assets:
     - lib/imagens/home01.png
     - lib/imagens/home2.png
-    - lib/imagens/home3.png 
+    - lib/imagens/home3.png
+    - lib/imagens/Ellipse 899.png
+    - lib/imagens/contato02.png
+    - lib/imagens/Contato03.png
+    - lib/imagens/Contato04.png
+    - lib/imagens/Contato05.png 
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

@@ -1,6 +1,8 @@
-import 'package:flutter/material.dart';// home
-import 'detalhes_destino_madri.dart'; // Importando a página de detalhes
+import 'package:flutter/material.dart';
+import 'detalhes_destino_paris.dart'; // Importando a página de detalhes
 import 'lugares_populares_page.dart'; // Importando a página de lugares populares
+import 'perfil_page.dart'; // Importando a página de perfil
+import 'mensagem_page.dart'; // Importando a página de mensagens
 
 class HomePage extends StatelessWidget {
   @override
@@ -94,11 +96,11 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   TextButton(
-  onPressed: () {
-    Navigator.pushNamed(context, '/lugaresPopulares');
-  },
-  child: Text('Ver tudo'),
-),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/lugaresPopulares');
+                    },
+                    child: Text('Ver tudo'),
+                  ),
                 ],
               ),
               SizedBox(height: 16),
@@ -137,12 +139,31 @@ class HomePage extends StatelessWidget {
       ),
       bottomNavigationBar: BottomNavigationBar(
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.message), label: 'Messages'),
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message),
+            label: 'Messages',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+          ),
         ],
         currentIndex: 1, // Define o item ativo (Home)
         selectedItemColor: Colors.blue,
+        onTap: (int index) {
+          if (index == 0) {
+            Navigator.pushNamed(context, '/mensagens'); // Navega para a página de mensagens
+          } else if (index == 2) {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => PerfilPage()),
+            );
+          }
+        },
       ),
     );
   }

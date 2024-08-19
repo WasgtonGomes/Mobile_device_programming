@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class DetalhesMadriPage extends StatelessWidget {
+class DetalhesParisPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class DetalhesMadriPage extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.4,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage('https://i.pinimg.com/564x/d5/fe/5c/d5fe5cd2078347a27be35c88cf242ec2.jpg'),
+                    image: NetworkImage('https://i.pinimg.com/564x/50/d0/f7/50d0f758e62f4edfa86ba73c517e8415.jpg'),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -81,7 +81,7 @@ class DetalhesMadriPage extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Madri',
+                                'Paris',
                                 style: TextStyle(
                                   fontSize: 26,
                                   fontWeight: FontWeight.bold,
@@ -90,7 +90,7 @@ class DetalhesMadriPage extends StatelessWidget {
                               ),
                               SizedBox(height: 4),
                               Text(
-                                'Madri, Espanha',
+                                'Paris, França',
                                 style: TextStyle(
                                   fontSize: 18,
                                   color: Colors.grey[700],
@@ -138,7 +138,7 @@ class DetalhesMadriPage extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              'US 6459 ',
+                              'US 8900 ',
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -171,7 +171,7 @@ class DetalhesMadriPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   image: DecorationImage(
-                                    image: NetworkImage('https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRz7ljD8Hh92vYAfjb-UAKkO7xW1SqKgy-eyJ58VCpgRs5T8nbS'),
+                                    image: NetworkImage('https://i.pinimg.com/736x/9c/c9/72/9cc9727061b090c1244f656f5609125f.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -182,7 +182,7 @@ class DetalhesMadriPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   image: DecorationImage(
-                                    image: NetworkImage('https://i.pinimg.com/236x/cd/8d/d6/cd8dd6b0eb77d6e84f625e2fd246e2a0.jpg'),
+                                    image: NetworkImage('https://i.pinimg.com/564x/67/6a/6c/676a6c5a05c0332eea9d118d39e8928b.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -193,7 +193,7 @@ class DetalhesMadriPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   image: DecorationImage(
-                                    image: NetworkImage('https://i.pinimg.com/564x/44/6b/f0/446bf0b8e6e18d3d58708eebd0565bc9.jpg'),
+                                    image: NetworkImage('https://i.pinimg.com/564x/e9/44/b4/e944b4c76fa5086b9f9cf0ac1be8ffec.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -204,7 +204,7 @@ class DetalhesMadriPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
                                   image: DecorationImage(
-                                    image: NetworkImage('https://i.pinimg.com/564x/9a/0f/63/9a0f63a35fcf87982e9b6aa06558a95e.jpg'),
+                                    image: NetworkImage('https://i.pinimg.com/564x/bc/9e/bd/bc9ebd0e0dd10e41533dd4cba1441ec2.jpg'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
@@ -244,7 +244,7 @@ class DetalhesMadriPage extends StatelessWidget {
                     SizedBox(height: 8),
                     // Texto Descritivo
                     Text(
-                      'Madri, a capital da Espanha, situada no centro do país, é uma cidade de avenidas elegantes e parques grandes e bem cuidados, como o Buen Retiro.',
+                      'A França é um dos destinos turísticos mais encantadores e diversificados do mundo. Conhecida por sua rica história, cultura vibrante e paisagens deslumbrantes, a França oferece algo para todos os tipos de viajantes.',
                       style: TextStyle(
                         fontSize: 16,
                         color: Colors.grey[700],
