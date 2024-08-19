@@ -25,7 +25,7 @@ class _IntegradoCarroselState extends State<IntegradoCarrosel> {
           // Primeira página do carrossel
           buildPage(
             context,
-            'A vida é curta e o mundo é vasto',
+            'A vida é curta e o mundo é \nvasto',
             'Na Friends tours and travel, personalizamos passeios educacionais confiáveis para destinos em todo o mundo',
             'https://www.impacteurope.net/sites/www.evpa.ngo/files/idea-photo/evpa-transformative-finance-deep-dive_1.jpg',
             0, // Índice da página atual
@@ -75,21 +75,125 @@ class _IntegradoCarroselState extends State<IntegradoCarrosel> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  title,
-                  style: TextStyle(
-                    fontSize: 32, 
-                    fontWeight: FontWeight.bold, 
-                    fontFamily: 'Roboto' // Aplica a fonte Roboto
+                if (pageIndex == 0) ...[
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'A vida é curta e o mundo é ',
+                          style: TextStyle(
+                            fontSize: 32, 
+                            fontWeight: FontWeight.bold, 
+                            fontFamily: 'Roboto', 
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'vasto',
+                          style: TextStyle(
+                            fontSize: 32, 
+                            fontWeight: FontWeight.bold, 
+                            fontFamily: 'Roboto', 
+                            color: Color(0xFFFF7029), // Cor FF7029
+                          ),
+                        ),
+                      ],
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
-                ),
+                  SizedBox(height: 0), // Pequeno espaçamento entre o texto e a imagem
+                  Align(
+                    alignment: Alignment.centerRight, // Alinha a imagem à direita
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 80.0), // Espaçamento de 80px à direita
+                      child: Image.asset(
+                        'lib/imagens/tela01.png', // Caminho da imagem
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ] else if (pageIndex == 1) ...[
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'É um grande mundo lá fora, vá ',
+                          style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto',
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'explorar',
+                          style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto',
+                            color: Color(0xFFFF7029), // Cor FF7029
+                          ),
+                        ),
+                      ],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 0), // Pequeno espaçamento entre o texto e a imagem
+                  Align(
+                    alignment: Alignment.centerRight, // Alinha a imagem à direita
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 80.0), // Espaçamento de 80px à direita
+                      child: Image.asset(
+                        'lib/imagens/tela0203.png', // Caminho da nova imagem
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ] else if (pageIndex == 2) ...[
+                  Text.rich(
+                    TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'As pessoas não fazem viagens, as viagens fazem as  ',
+                          style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto',
+                            color: Colors.black,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'pessoas',
+                          style: TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Roboto',
+                            color: Color(0xFFFF7029), // Cor FF7029
+                          ),
+                        ),
+                        
+                      ],
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 0), // Pequeno espaçamento entre o texto e a imagem
+                  Align(
+                    alignment: Alignment.centerRight, // Alinha a imagem à direita
+                    child: Padding(
+                      padding: const EdgeInsets.only(right: 60.0), // Espaçamento de 80px à direita
+                      child: Image.asset(
+                        'lib/imagens/tela0203.png', // Caminho da nova imagem
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+                ],
                 SizedBox(height: 12), // Aumentei o espaçamento
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontSize: 18, 
-                    color: Colors.grey, 
+                    fontSize: 18,
+                    color: Colors.grey,
                     fontFamily: 'Roboto' // Aplica a fonte Roboto
                   ),
                   textAlign: TextAlign.center,

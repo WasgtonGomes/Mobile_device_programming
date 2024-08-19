@@ -12,44 +12,73 @@ class HomePage extends StatelessWidget {
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: EdgeInsets.all(8.0),
-              decoration: BoxDecoration(
-                color: Colors.grey[200], // Cor de fundo cinza bem clarinho
-                borderRadius: BorderRadius.circular(12),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black26,
-                    blurRadius: 4,
-                    offset: Offset(0, 4),
-                  ),
-                ],
+            ClipRRect(
+              borderRadius: BorderRadius.circular(30), // Arredondamento igual ao da imagem
+              child: Container(
+                padding: EdgeInsets.all(8.0),
+                decoration: BoxDecoration(
+                  color: Colors.grey[200], // Cor de fundo cinza bem clarinho
+                  borderRadius: BorderRadius.circular(30), // Mesmo arredondamento da imagem
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 4,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Row(
+                  children: [
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(30), // Bordas arredondadas para a imagem
+                      child: Image.network(
+                        'https://avatars.githubusercontent.com/u/71408084?v=4',
+                        width: 50,
+                        height: 50,
+                      ),
+                    ),
+                    SizedBox(width: 8),
+                    const Text(
+                      'WASGTON',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-              child: Row(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.network(
-                      'https://avatars.githubusercontent.com/u/71408084?v=4',
-                      width: 50,
-                      height: 50,
+            ),
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.notifications),
+                  onPressed: () {
+                    // Ação quando o ícone é pressionado
+                  },
+                ),
+                Positioned(
+                  top: -4,
+                  right: -4,
+                  child: Container(
+                    width: 10,
+                    height: 10,
+                    decoration: BoxDecoration(
+                      color: Colors.yellow,
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white, width: 2),
                     ),
                   ),
-                  SizedBox(width: 8),
-                  const Text(
-                    'WASGTON',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 24,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Colors.white,
+        elevation: 0, // Remove a sombra padrão da AppBar
+        automaticallyImplyLeading: false, // Remove o botão de voltar padrão
       ),
       body: SafeArea(
         child: Padding(
@@ -79,13 +108,22 @@ class HomePage extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 35,
                       color: Colors.orange,
-                      decoration: TextDecoration.underline,
-                      decorationStyle: TextDecorationStyle.wavy,
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 24), // Espaço entre título e subtítulo
+              SizedBox(height: 0),
+              Align(
+                alignment: Alignment.centerRight, // Alinha a imagem à direita
+                child: Padding(
+                  padding: EdgeInsets.only(right: 60.0), // Espaçamento de 60px à direita
+                  child: Image.asset(
+                    'lib/imagens/tela04.png', // Caminho da imagem tela04.png
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              // Espaço entre título e subtítulo
 
               // Subtítulo Melhor Destino
               Row(
@@ -185,16 +223,17 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(15.0),
-                    topRight: Radius.circular(15.0),
-                  ),
-                  child: Image.network(
-                    imageUrl,
-                    fit: BoxFit.cover,
-                    height: 200, // Altura fixa para as imagens do carrossel
-                    width: double.infinity,
+                Padding(
+                  padding: const EdgeInsets.all(8
+                  .0), // Margem interna de 8px
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(15.0), // Bordas arredondadas para a imagem
+                    child: Image.network(
+                      imageUrl,
+                      fit: BoxFit.cover,
+                      height: 200, // Altura fixa para as imagens do carrossel
+                      width: double.infinity,
+                    ),
                   ),
                 ),
                 Padding(

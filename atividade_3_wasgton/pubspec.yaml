@@ -62,7 +62,10 @@ flutter:
     - lib/imagens/contato02.png
     - lib/imagens/Contato03.png
     - lib/imagens/Contato04.png
-    - lib/imagens/Contato05.png 
+    - lib/imagens/Contato05.png
+    - lib/imagens/tela01.png
+    - lib/imagens/tela0203.png
+    - lib/imagens/tela04.png 
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
