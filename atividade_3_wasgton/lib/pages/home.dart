@@ -32,17 +32,17 @@ class HomePage extends StatelessWidget {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(30), // Bordas arredondadas para a imagem
                       child: Image.network(
-                        'https://avatars.githubusercontent.com/u/71408084?v=4',
+                        'https://i.pinimg.com/564x/1d/13/9a/1d139af82d76fc5e5e94d17a8429d64b.jpg',
                         width: 50,
                         height: 50,
                       ),
                     ),
-                    SizedBox(width: 8),
+                    const SizedBox(width: 8),
                     const Text(
-                      'WASGTON',
+                      'WASGTON E LEONARDO',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 24,
+                        fontSize: 18,
                         color: Colors.black,
                       ),
                     ),
@@ -112,11 +112,11 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 0),
+              const SizedBox(height: 0),
               Align(
                 alignment: Alignment.centerRight, // Alinha a imagem à direita
                 child: Padding(
-                  padding: EdgeInsets.only(right: 60.0), // Espaçamento de 60px à direita
+                  padding: const EdgeInsets.only(right: 60.0), // Espaçamento de 60px à direita
                   child: Image.asset(
                     'lib/imagens/tela04.png', // Caminho da imagem tela04.png
                     fit: BoxFit.cover,
@@ -129,7 +129,7 @@ class HomePage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     'Melhor destino',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
@@ -224,8 +224,7 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8
-                  .0), // Margem interna de 8px
+                  padding: const EdgeInsets.all(8.0), // Margem interna de 8px
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(15.0), // Bordas arredondadas para a imagem
                     child: Image.network(

@@ -40,11 +40,11 @@ class PerfilPage extends StatelessWidget {
                 children: [
                   CircleAvatar(
                     radius: 50,
-                    backgroundImage: NetworkImage('https://avatars.githubusercontent.com/u/71408084?v=4'),
+                    backgroundImage: NetworkImage('https://i.pinimg.com/564x/1d/13/9a/1d139af82d76fc5e5e94d17a8429d64b.jpg'),
                   ),
                   SizedBox(height: 10),
                   Text(
-                    'Wasgton',
+                    'Wasgton e Leonardo',
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
@@ -52,7 +52,7 @@ class PerfilPage extends StatelessWidget {
                   ),
                   SizedBox(height: 5),
                   Text(
-                    'Wasgton@email.com',
+                    'WasgtonLeonardo@email.com',
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,

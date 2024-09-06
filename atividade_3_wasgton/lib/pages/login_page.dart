@@ -16,8 +16,8 @@ class LoginPage extends StatelessWidget {
               const SizedBox(height: 50), // Espaço para centralizar os itens
               // Título da tela
               const Text(
-                'Faça seu login',
-                style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold), // Aumentei o tamanho da fonte dos labels
+                'Seja bem vindo ao  Projeto de Wasgton e Leonardo',
+                style: TextStyle(fontSize: 29, fontWeight: FontWeight.bold), // Aumentei o tamanho da fonte dos labels
               ),
               const SizedBox(height: 12),
               // Subtítulo da tela
