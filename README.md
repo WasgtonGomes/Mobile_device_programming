@@ -1,104 +1,66 @@
-# 🌍 Guia de Turismo — Flutter & Dart  
+# 📱 Mobile Programming — Flutter & Dart  
 
-💻 **Projeto final da disciplina de Programação Mobile**  
-📱 Aplicativo desenvolvido em **Flutter** com **Dart**, focado em apresentar destinos turísticos de forma interativa.  
-
-O sistema explora conceitos de:  
-- 🎨 **Interfaces gráficas** com `StatelessWidget` e `StatefulWidget`  
-- 🔄 **Gerenciamento de estado** (`setState`, `Provider`)  
-- 📝 **Formulários e validação**  
-- 🌐 **Consumo de APIs** (requisições HTTP GET/POST)  
-- 🗄️ **Persistência de dados** com **SQLite (sqflite)**  
-- 🎯 **Prototipação no Figma**  
-- 🧩 **Componentização de Widgets reutilizáveis**  
+💻 **Academic repository for the Mobile Programming course**  
+This repository contains exercises, class activities, and the final project developed during the Mobile Programming discipline. All projects were built using **Flutter** and **Dart**, with focus on practical application of mobile development concepts.  
 
 ---
 
-## 🚀 Objetivo do projeto  
-O **Guia de Turismo** tem como objetivo fornecer informações rápidas e organizadas sobre destinos turísticos populares, permitindo que o usuário:  
-- Explore os destinos mais visitados.  
-- Visualize detalhes com fotos, localização, avaliações e preços.  
-- Acesse informações salvas em banco de dados local.  
-- Interaja com a interface de forma simples e intuitiva.  
+## 🚀 Course Overview  
+The **Mobile Programming** course provided a comprehensive introduction to mobile application development using Flutter. Key learning objectives included:  
+- Understanding mobile app history and operating systems.  
+- Setting up the development environment for Flutter.  
+- Creating interactive user interfaces with **StatelessWidget** and **StatefulWidget**.  
+- Implementing state management using **setState** and **Provider**.  
+- Using layout widgets: **Row**, **Column**, **Container**, **Expanded**, **ListView**, **GridView**, **Drawer**.  
+- Handling user input through **TextField** and **FormField**, including validation.  
+- Navigating between screens and passing data efficiently.  
+- Consuming APIs with **HTTP GET/POST requests**.  
+- Persisting data locally using **SQLite (sqflite)**.  
+- Prototyping app designs using **Figma**.  
+- Version control and project management with **GitHub**.  
 
 ---
 
-## 📂 Estrutura das Telas (Pages)  
+## 🗓️ Topics and Activities Covered  
 
-### 🔑 **LoginPage**  
-- Tela inicial do app.  
-- Formulário com campos personalizados (`CustomTextField`) e botão estilizado (`CustomButton`).  
-- Objetivo: autenticar ou simular acesso do usuário.  
-
----
-
-### 🏠 **HomePage**  
-- Tela principal após login.  
-- Componentes:  
-  - Barra superior com **foto de perfil + nome**.  
-  - Notificações (ícone interativo).  
-  - Seção **"Melhor destino"** em carrossel.  
-- Objetivo: servir como hub de navegação para os destinos.  
-
----
-
-### 🎡 **IntegradoCarrosel**  
-- Tela de carrossel de imagens.  
-- Exibe os destinos em destaque de forma interativa.  
+1. **Course introduction and environment setup** — Flutter configuration, first project creation.  
+2. **Widgets and UI basics** — Buttons, text, colors, `child` and `children`.  
+3. **App structure** — AppBar, titles, interactive buttons triggering console messages.  
+4. **Layouts** — Row, Column, Container, Expanded, Image, Icon.  
+5. **StatelessWidget applications** — Apps without dynamic state and simple UI updates.  
+6. **Lists and grids** — ListView, GridView, creating interactive menus.  
+7. **Navigation and detailed screens** — Multi-page apps with intuitive back navigation.  
+8. **StatefulWidget and setState** — Dynamic state changes, cascading data updates.  
+9. **FormField and validation** — Login forms and input validation.  
+10. **Provider implementation** — State management across multiple widgets.  
+11. **HTTP requests** — GET and POST requests for API consumption.  
+12. **Prototyping and final project** — Designing 12 screens in Figma, implementing login system, data persistence, navigation, and reusable components.  
+13. **Project presentation and evaluation** — Finalization, testing, and deployment of the project.  
 
 ---
 
-### 🏰 **DetalhesMadriPage**  
-- Mostra informações detalhadas sobre **Madri (Espanha)**.  
-- Componentes:  
-  - Foto em destaque.  
-  - Nome do destino, localização e avaliações.  
-  - Carrossel de imagens adicionais.  
-  - Descrição do local.  
-  - Botão **“Agende agora”**.  
+## ⚙️ Tools and Technologies Used  
+- [Flutter](https://flutter.dev/) — Mobile app framework.  
+- [Dart](https://dart.dev/) — Programming language for Flutter apps.  
+- [Sqflite](https://pub.dev/packages/sqflite) — SQLite plugin for local data persistence.  
+- [Path](https://pub.dev/packages/path) — Path support for SQLite.  
+- [Figma](https://figma.com) — Prototyping and design tool.  
+- [GitHub](https://github.com/) — Version control and project management.  
 
 ---
 
-### 🗼 **DetalhesParisPage**  
-- Mesma estrutura da tela de Madri, mas para **Paris (França)**.  
-- Inclui fotos, preços, avaliação e botão de agendamento.  
+## 🧩 Skills Developed  
+- Building dynamic and interactive mobile UIs.  
+- Implementing proper state management.  
+- Validating user input and handling forms.  
+- Consuming APIs and managing data locally.  
+- Designing prototypes and translating them into functional apps.  
+- Organizing and managing projects with GitHub.  
 
 ---
 
-### 📍 **LugaresPopularesPage**  
-- Lista com outros destinos turísticos cadastrados.  
-- Os dados vêm do **SQLite (DataBaseTurismo)**.  
-
----
-
-### 👤 **PerfilPage**  
-- Exibe informações do usuário.  
-- Pode ser expandida para permitir edição de perfil.  
-
----
-
-### 💬 **MensagensPage**  
-- Tela para exibir notificações ou mensagens do app.  
-- Objetivo: comunicação e lembretes para o usuário.  
-
----
-
-## 🗄️ Banco de Dados Local — SQLite  
-Arquivo: `database_turismo.dart`  
-- Tabela: **places**  
-- Campos: `id`, `name`, `location`, `reviews`  
-- Dados iniciais: Madri, Paris, Lima, Cairo, Ji-Paraná e Nova York.  
-- Funções: **insert**, **queryAllPlaces**, **updatePlace**.  
-
----
-
-## 🧩 Componentes Reutilizáveis  
-- **CustomButton**: botão estilizado com largura total e bordas arredondadas.  
-- **CustomTextField**: campo de texto personalizado com suporte a senha (`obscureText`).  
-
----
-
-## 📸 Demonstração Visual  
-👉 Aqui você pode adicionar **prints das telas** (ou gifs) para que quem acessar o repositório veja o app em funcionamento.  
-
-
+## 📂 Repository Content  
+This repository includes:  
+- Class exercises from lessons 1 to 20.  
+- Practical examples of widgets, navigation, state management, forms, and API consumption.  
+- Final project integrating all course concepts into a complete mobile application.  
